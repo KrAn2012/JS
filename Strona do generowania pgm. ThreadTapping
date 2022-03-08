@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Stronka z gwintami</title>
+    <link href="UkładStrony.css" rel="stylesheet">
+    <script  src="WybórGwintów.js"></script>
+    
+  </head>
+
+  <body>
+
+    <h1>Programowanie gwintowania</h1>
+   
+       <label id="Gwinty">Wybierz rodzaj gwintu: </label>
+             <select id="WybórGwintu">
+                    <option value="M2">M2</option>
+                    <option value="M3">M3</option>
+                    <option value="M4">M4</option>
+                    <option value="M5">M5</option>
+             </select>
+
+                    <button onclick="WybórFunction()">Wybierz gwint</button>
+                    <p id="WyświetlWybór" >Wybrany gwint</p>
+
+
+    
+    <div id="LocGłebokość">
+          <label >Podaj głębokość gwintu</label>
+          <input id="Głębokość" type="number" min="0" onkeydown="return event.keyCode !== 69"/>
+
+          <label id="labelVc">Podaj Vc z tabeli</label>
+          <input id="Vc" type="number" min="0"  onkeydown="return event.keyCode !== 69"  >
+
+          <label >Obroty prawe</label>
+          <input type="checkbox"id="Prawe" onclick="Prawe()" checked >
+
+          <label >Obroty lewe</label>
+          <input type="checkbox" id="Lewe" onclick="Lewe()" >
+    </div>
+
+
+
+       <input type="button" value="Generuj " onclick="calc()" onclick="Generowanie()"/>
+       
+         
+       <table id="tablePgm" >
+            <thead>
+                  <tr>
+                    <caption>Pgm gwintowania</caption>
+                         <th >Heidenhain</th>
+                         <th >Fanuc</th>
+                 </tr>   
+            </thead>
+            <tbody>
+                  <tr>
+                    <td id="HeidenhainText"></td>
+                        <td id="FanucText"></td>
+                  </tr>
+            </tbody>
+       </table>
+
+
+
+<table id="tableVc">
+  <thead>
+  <tr>
+    <th style="max-width: 60%;">ISO</th>
+    <th colspan="3"> Vc (m/min.)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td id="opis">Stal węglowa , Stal nierdzewna tal wysokostopowa i wysokostopowa Stal narzędziowa Stal niskostopowa</td> 
+    <td id="P">P</td>
+    <td>5-35</td>
+    
+  </tr>
+  <tr>
+    <td id="opis">Żeliwo szare (GJL) 
+      Żeliwo wermikularne (GJV) CGI 
+      Żeliwo ciągliwe(GJMW / GJMB) 
+      Żeliwo ciągliwe (GJMB) 
+      Żeliwo sferoidalne (GJS) 
+      Żeliwo sferoidalne (GJS) ADI </td>
+    <td id="M">M</td>
+    <td>5-35</td>
+   
+  </tr>
+  <tr>
+    <td id="opis">Stopy aluminium do obróbki plastycznej
+      Stopy aluminium 
+      odlewnicze
+      Stopy magnezu
+      Miedz i jej stopy</td>
+    <td id="K">K</td>
+    <td>5-35</td>
+    
+  </tr>
+  <tr>
+    <td id="opis">Stopy żaroodporne Stopy tytanu</td>
+    <td id="S">N</td>
+    <td>5-35</td>
+    
+  </tr>
+  <tr>
+    <td id="opis">Stal hartowana Żeliwo utwardzame i hartowanie</td>
+    <td id="N">N</td>
+    <td>5-35</td>
+    
+  </tr>
+</tbody>
+</table>
+
+<div id="link">
+<a  href="https://www.fanar.pl/wp-content/uploads/2021/07/katalog-fanar-21.pdf">Fanar katalog</a>
+</div>
+
+  </body>
+
+</html>
