@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Stronka z gwintami</title>
+    <title>Strona z gwintami</title>
     <link href="UkładStrony.css" rel="stylesheet">
     <script  src="WybórGwintów.js"></script>
     
